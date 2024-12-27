@@ -18,9 +18,9 @@ def get_requirements(file_path:str)->List[str]:
 
 __version__ = '0.0.0'
 
-REPO_NAME = "Student_Performace_Analyser"
+REPO_NAME = "Student_Performance_Analyser"
 AUTHOR_USERNAME = "Mayuresh999"
-SRC_REPO = "Student_Performace_Analyser"
+SRC_REPO = "Student_Performance_Analyser"
 AUTHOR_EMAIL = "mayuresh.madiwale@yahoo.com"
 
 
@@ -33,7 +33,7 @@ setuptools.setup(
     long_description= long_description,
     long_description_content= "text/markdown",
     url=f"https://github.com/{AUTHOR_USERNAME}/{REPO_NAME}",
-    project_urls= {"Student_Performace_Analyser" : f"https://github.com/{AUTHOR_USERNAME}/{REPO_NAME}/issues"},
+    project_urls= {"Student_Performance_Analyser" : f"https://github.com/{AUTHOR_USERNAME}/{REPO_NAME}/issues"},
     package_dir= {"" : "src"},
     packages=setuptools.find_packages(where="src"),
     install_requires = get_requirements('requirements.txt')
