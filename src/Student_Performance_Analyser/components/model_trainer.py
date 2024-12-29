@@ -15,6 +15,7 @@ from xgboost import XGBRegressor
 from Student_Performance_Analyser.logger import logger
 from Student_Performance_Analyser.exception import CustomException
 from Student_Performance_Analyser.utils.common import save_object , evaluate_models
+from Student_Performance_Analyser.config.configuration import params
 
 
 
@@ -46,7 +47,7 @@ class ModelTrainer:
                 "CatBoost": CatBoostRegressor(verbose=False)
             }
 
-            model_report:dict = evaluate_models(X_train=X_train, Y_train=Y_train, X_test=X_test, Y_test=Y_test, models=models)
+            model_report:dict = evaluate_models(X_train=X_train, Y_train=Y_train, X_test=X_test, Y_test=Y_test, models=models, params=params)
 
             best_model_name = max(model_report, key=model_report.get)
             best_model_score = model_report[best_model_name]
